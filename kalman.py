@@ -1,8 +1,8 @@
 # -*- coding: UTF-8 -*-
 """
-@Project ：kalman-filter-in-single-object-tracking 
-@File ：kalman.py
-@Date ：9/15/21 3:36 PM 
+@Project: kalman-filter-in-single-object-tracking 
+@File: kalman.py
+@Date: 9/15/21 3:36 PM 
 """
 import random
 import numpy as np
