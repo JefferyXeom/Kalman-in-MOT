@@ -48,7 +48,7 @@ class Kalman:
     def association(kalman_list, mea_list):
         """
         多目标关联，使用最大权重匹配
-        :param kalman_list: 状态列表，存着每个kalman对象，已经完成预测外推
+        :param kalman_list: 状态列表, 存着每个kalman对象, 已经完成预测外推
         :param mea_list: 量测列表，存着矩阵形式的目标量测 ndarray [c_x, c_y, w, h].T
         :return:
         """
