@@ -45,8 +45,8 @@ def main():
     meas_list_all = measure.load_measurement(const.FILE_DIR)
     sz = (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)),
           int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT)))
-    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')  # opencv3.0
-    video_writer = cv2.VideoWriter(const.VIDEO_OUTPUT_PATH, fourcc, const.FPS, sz, True)
+    # fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')  # opencv3.0
+    # video_writer = cv2.VideoWriter(const.VIDEO_OUTPUT_PATH, fourcc, const.FPS, sz, True)
     # 2. 逐帧滤波
     state_list = []  # 单帧目标状态信息，存kalman对象
     frame_cnt = 1
@@ -96,14 +96,14 @@ def main():
 
         cv2.putText(frame, str(frame_cnt), (0, 50), color=const.RED, fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1.5)
         cv2.imshow('Demo', frame)
-        cv2.imwrite("./image/{}.jpg".format(frame_cnt), frame)
-        video_writer.write(frame)
-        cv2.waitKey(100)  # 显示 1000 ms 即 1s 后消失
+        # cv2.imwrite("./image/{}.jpg".format(frame_cnt), frame)
+        # video_writer.write(frame)
+        cv2.waitKey(1000)  # 显示 1000 ms 即 1s 后消失
         frame_cnt += 1
 
     cap.release()
     cv2.destroyAllWindows()
-    video_writer.release()
+    # video_writer.release()
 
 
 if __name__ == '__main__':
